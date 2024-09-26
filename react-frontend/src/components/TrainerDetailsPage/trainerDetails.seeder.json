@@ -1,0 +1,10 @@
+[
+    {
+        "trainerIcPassportNumber": "123456-78-9012",
+        "organizationName": "ABC SDN BHD"
+    },
+    {
+        "trainerIcPassportNumber": "234567-89-0123",
+        "organizationName": "XYZ SDN BHD"
+    }
+]

@@ -1,0 +1,920 @@
+{
+  "projectName": "james-test-training-soft",
+  "description": "A test software for training",
+  "auth": "jwt",
+  "database": {
+    "pathToLogo": {
+      "s": "/assets/applications_logos/mongodb-s.png",
+      "l": "/assets/applications_logos/mongodb.png"
+    },
+    "appName": "mongodb-database",
+    "disabled": false,
+    "type": "database",
+    "name": "mongodb",
+    "label": "MongoDB"
+  },
+  "stack": [
+    {
+      "appName": "nodejs-backend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/nodejs-s.png",
+        "l": "/assets/applications_logos/nodejs.png"
+      },
+      "type": "backend",
+      "name": "nodejs",
+      "label": "Node.js Express Feathers.js"
+    },
+    {
+      "appName": "react-frontend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/react-s.png",
+        "l": "/assets/applications_logos/react.png"
+      },
+      "type": "frontend",
+      "name": "react",
+      "label": "React JavaScript"
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "users",
+      "databaseName": "users",
+      "displayName": "Users",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [],
+      "schemaList": [
+        {
+          "fieldName": "name",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Name",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4d75d743a898bf29bfdc2"
+          },
+          "min": 2,
+          "max": 100,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": true,
+          "lowercase": true,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "component": "p",
+          "label": "Email",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4d75d743a898bf29bfdc3"
+          },
+          "min": 5,
+          "max": 150,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "password",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": true,
+          "editable": false,
+          "sortable": false,
+          "required": true,
+          "component": "p",
+          "label": "Password",
+          "faker": {
+            "module": "lorem",
+            "subModule": "sentence",
+            "args": "1",
+            "skip": false,
+            "_id": "66f4d75d743a898bf29bfdc4"
+          },
+          "min": 5,
+          "max": 300,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": true,
+      "seeder": [],
+      "skip": true,
+      "downloadable": true,
+      "uploadable": false,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "businessInformation",
+      "databaseName": "business_information",
+      "displayName": "Business Information",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06ba"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "numberOfEmployees",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Number Of Employees",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06bb"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "fullTimeTrainers",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Full Time Trainers",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06bc"
+          },
+          "min": 0,
+          "max": 10000000,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "partTimeTrainers",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Part Time Trainers",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06bd"
+          },
+          "min": 1,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "organizationName": "ABC SDN BHD",
+          "numberOfEmployees": 2,
+          "fullTimeTrainers": 1,
+          "partTimeTrainers": 1
+        },
+        {
+          "organizationName": "XYZ SDN BHD",
+          "numberOfEmployees": 1,
+          "fullTimeTrainers": 1
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "officerInCharge",
+      "databaseName": "officer_in_charge",
+      "displayName": "Officer In Charge",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "officerName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Officer Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06bf"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06c0"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "officerName": "DORIA",
+          "organizationName": "ABC SDN BHD"
+        },
+        {
+          "officerName": "ROSNANI",
+          "organizationName": "ABC SDN BHD"
+        },
+        {
+          "officerName": "JAMES",
+          "organizationName": "XYZ SDN BHD"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "trainingProgramOwnership",
+      "databaseName": "training_program_ownership",
+      "displayName": "Training Program Ownership",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06c2"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "organizationName": "ABC SDN BHD"
+        },
+        {
+          "organizationName": "XYZ SDN BHD"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "trainingProviderSInformation",
+      "databaseName": "training_provider_s_information",
+      "displayName": "Training Provider's Information",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06c4"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "organizationAddress",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Address",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06c5"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "organizationContactNumber",
+          "type": "Number",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p_number",
+          "label": "Organization Contact Number",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06c6"
+          },
+          "min": 0,
+          "max": 2345678901,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "organizationName": "ABC SDN BHD",
+          "organizationAddress": "KOTA KINABALU",
+          "organizationContactNumber": 1234567890
+        },
+        {
+          "organizationName": "XYZ SDN BHD",
+          "organizationAddress": "LUYANG",
+          "organizationContactNumber": 2345678901
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "trainerDetails",
+      "databaseName": "trainer_details",
+      "displayName": "Trainer Details",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "trainerIcPassportNumber",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Trainer IC/Passport Number",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06c8"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "organizationName",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "component": "p",
+          "label": "Organization Name",
+          "faker": {
+            "skip": false,
+            "_id": "66f4d907743a898bf29c06c9"
+          },
+          "min": 2,
+          "max": 1000,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "trainerIcPassportNumber": "123456-78-9012",
+          "organizationName": "ABC SDN BHD"
+        },
+        {
+          "trainerIcPassportNumber": "234567-89-0123",
+          "organizationName": "XYZ SDN BHD"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[
+    {
+        "organizationName": "ABC SDN BHD",
+        "numberOfEmployees": 2,
+        "fullTimeTrainers": 1,
+        "partTimeTrainers": 1
+    },
+    {
+        "organizationName": "XYZ SDN BHD",
+        "numberOfEmployees": 1,
+        "fullTimeTrainers": 1
+    }
+]
